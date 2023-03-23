@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <!-- https://cdnjs.com/libraries/twitter-bootstrap/5.0.0-beta1 -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css" />
+
+    <!-- Icons: https://getbootstrap.com/docs/5.0/extend/icons/ -->
+
+    <!-- https://cdnjs.com/libraries/font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https: //fonts.googleapis.com/css2?family= Noto+Sans+TC & display = swap" rel="stylesheet"> -->
+    <title>CHIMEI</title>
+</head>
+
+<body>
+    <header id="header">
+
+        <div class="container">
+            <div class="box-header">
+                <ul class="topNav columns inline">
+                    <li id="header-menu-login"><a href="../../login" data-unit="login">會員登入</a></li>
+
+                    <li><a href="../../login"
+                            data-unit="member cart cancel orders order returns returned return tracking profile password addresses address">會員中心</a>
+                    </li>
+                    <li><a href="../../faq" data-unit="faq">常見問答</a></li>
+                    <li><a href="../../contact" data-unit="contact">客服中心</a></li>
+                </ul>
+            </div>
+            <a href="./" class="logo" title="奇美博物館">
+                <h1 class="text-hide">奇美博物館</h1>
+            </a>
+            <a href="https://www.facebook.com/chimeimuseum" target="_blank" title="facebook"
+                class="fb icon-facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path
+                        d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                </svg><span class="text-hide">facebook</span></a>
+            <div class="box-order">
+                <a href="../../cart" class="btn-car icon-cart3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi icon-cart3" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg><span class="text-hide">我的購物車</span></a>
+                <p class="txt"><span>目前購物車 ( </span><strong id="my-cart-count" class="">0</strong><span>)</span></p>
+            </div>
+            <form class="box-search form-inline" id="product-search-form">
+                <div class="form-group  d-none d-sm-block">
+                    <label for="search" class="sr-only">search</label>
+                    <input name="keyword" type="text" class="form-control" placeholder="商品搜尋">
+                    <button type="submit" class="btn btn-primary icon-search"><span class="text-hide">搜尋</span><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg></button>
+
+                </div>
+            </form>
+        </div>
+
+        <div class="navbar navbar-default mt-0" role="navigation" id="mainNav">
+            <!-- <div class="navbar-header"> -->
+            <!-- <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">選單</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> -->
+        </div>
+
+        <!-- MENU -->
+        <div class="container ">
+            <div class="menu d-none d-sm-block ">
+                <ul class="d-flex flex-row list-unstyled">
+                    <li class="flex-fill ">
+                        <a href="#" class="p-3 ps-4">➤線上課程推薦</a>
+                    </li>
+                    <li class="flex-fill">
+                        <a href="#" class="p-3">➤主題推薦</a>
+                    </li>
+                    <li class="flex-fill">
+                        <a href="#" class="p-3">典藏框畫</a>
+                    </li>
+                    <li class="flex-fill">
+                        <a href="#" class="p-3">雕塑</a>
+                    </li>
+                    <li class="flex-fill">
+                        <a href="#" class="p-3">古典音樂</a>
+                    </li>
+                    <li class="flex-fill">
+                        <a href="#" class="p-3">文創精品</a>
+                    </li>
+                    <li class="flex-fill">
+                        <a href="#" class="p-3">文具用品</a>
+                    </li>
+                    <li class="flex-fill">
+                        <a href="#" class="p-3">飾品</a>
+                    </li>
+                    <li class="flex-fill">
+                        <a href="#" class="p-3">生活居家</a>
+                    </li>
+                    <li class="flex-fill">
+                        <a href="#" class="p-3 pe-4">書籍</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="container py-3">
+            <img src="./images/662000020021_nor_banner_sub.jpg" alt="" class="w-100">
+        </div>
+        <!-- product -->
+        <div class="container d-flex ">
+            <main class="w-100 d-none d-sm-block">
+                <div>
+                    <ul class="list-unstyled d-none d-sm-block">
+                        <li class="lefttitle"><a href="#">文創精品</a></li>
+                        <li class="leftmenu"><a href="#">奇美動物兵團系列</a></li>
+                        <li class="leftmenu"><a href="#">奇美動物樂團系列</a></li>
+                        <li class="leftmenu"><a href="#">小藝樹家族系列</a></li>
+                        <li class="leftmenu"><a href="#">玩具</a></li>
+                        <li class="leftmenu"><a href="#">鑰匙圈、吊飾</a></li>
+                        <li class="leftmenu"><a href="#">3C週邊</a></li>
+                    </ul>
+
+                    <ul class="list-unstyled  d-none d-sm-block">
+                        <h3 class="mt-5 mb-1 pb-1">熱門商品</h3>
+                        <li class="leftbox"><a href="#" class="d-flex">
+                                <div class="">
+                                    <img src="./images/left-662000020021 (1).jpg" class="medium"
+                                        data-params="{w: 75, h: 75}">
+                                </div>
+                                <div class="text">
+                                    <p class="name subject" data-params="{length: 20}">奇美動物樂團L型資料夾-獅子</p>
+                                </div>
+                            </a></li>
+                        <li class="leftbox"><a href="#" class="d-flex">
+                                <div class="">
+                                    <img src="./images/left-662000020021 (1).jpg" class="medium"
+                                        data-params="{w: 75, h: 75}">
+                                </div>
+                                <div class="text">
+                                    <p class="name subject" data-params="{length: 20}">奇美動物樂團L型資料夾-獅子</p>
+                                </div>
+                            </a></li>
+                        <li class="leftbox"><a href="#" class="d-flex">
+                                <div class="">
+                                    <img src="./images/left-662000020021 (1).jpg" class="medium"
+                                        data-params="{w: 75, h: 75}">
+                                </div>
+                                <div class="text">
+                                    <p class="name subject" data-params="{length: 20}">奇美動物樂團L型資料夾-獅子</p>
+                                </div>
+                            </a></li>
+                        <li class="leftbox"><a href="#" class="d-flex">
+                                <div class="">
+                                    <img src="./images/left-662000020021 (1).jpg" class="medium"
+                                        data-params="{w: 75, h: 75}">
+                                </div>
+                                <div class="text">
+                                    <p class="name subject" data-params="{length: 20}">奇美動物樂團L型資料夾-獅子</p>
+                                </div>
+                            </a></li>
+                        <li class="leftbox"><a href="#" class="d-flex">
+                                <div class="">
+                                    <img src="./images/left-662000020021 (1).jpg" class="medium"
+                                        data-params="{w: 75, h: 75}">
+                                </div>
+                                <div class="text">
+                                    <p class="name subject" data-params="{length: 20}">奇美動物樂團L型資料夾-獅子</p>
+                                </div>
+                            </a></li>
+
+                    </ul>
+                    <div class="d-none d-sm-block">
+                        <h3>價格區間</h3>
+                        <div>
+                            <span class="price my-2">最低價<input type="text" name="min">元</span>
+                        </div>
+                        <div>
+                            <span class="price my-2">最高價<input type="text" name="max">元</span>
+                        </div>
+
+                        <!-- <dl class="">
+                            <dt>最高價</dt>
+                            <dd><input type="text" name="max"> 元</dd>
+                        </dl> -->
+                        <a href="#" class="btn btn-success search ms-4">確定送出</a>
+                    </div>
+                </div>
+
+            </main>
+            <main class="main product col-md-10 ms-4">
+
+                <header class="head clearfix df float-end">
+                    <ol class="breadcrumb justify-content-end">
+                        <li>
+                            <a href="../../">首頁</a>
+                        </li>
+                        <li class="active"><a class="">文創精品</a></li>
+                    </ol>
+                    <h1 href="../../products/14" class="thumbnail">文創精品</h1>
+                    <div class="sort col-xs-12" id="mb-product">
+                        <span class="d-none d-sm-inline">排序依：</span>
+                        <a href="#" class="smooth">熱門點閱</a>
+                        <a href="#" class="smooth">價格低至高 ↑</a>
+                        <a href="#" class="smooth">價格高至低 ↓</a>
+                    </div>
+                </header>
+                <section class="pd thumbnail">
+                    <ul class="columns productList row d-flex text-center" id="product-list">
+                        <li class="sampleCode odd first col-lg-3 col-sm-12 ">
+                            <a href="../../product/2480" class="detail ">
+                                <div class="project-info">
+                                    <span class="button dark">MORE</span>
+                                </div>
+                                <img src="./images/662000010081 (1).jpg" class="medium" data-params="{w: 200, h: 200}">
+                            </a>
+                            <div class="text">
+                                <p class="code serial" data-params="{length: 10}">S000662000020021</p>
+                                <p class="name subject" data-params="{length: 25}">3-6人組 穹頂計畫III《末日慶典》</p>
+                                <p class="special">售價 <span class="value">NT $ 1,980</span> 元</p>
+                            </div>
+                        </li>
+                        <li class="sampleCode odd first col-lg-3 col-sm-12">
+                            <a href="../../product/2480" class="detail">
+                                <div class="">
+                                    <div class="project-info">
+                                        <span class="button dark">MORE</span>
+                                    </div>
+                                    <img src="./images/662000010081 (1).jpg" class="medium"
+                                        data-params="{w: 200, h: 200}">
+                                </div>
+                            </a>
+                            <div class="text">
+                                <p class="code serial" data-params="{length: 10}">S000662000020021</p>
+                                <p class="name subject" data-params="{length: 25}">3-6人組 穹頂計畫III《末日慶典》</p>
+                                <p class="special">售價 <span class="value">NT $ 1,980</span> 元</p>
+                            </div>
+                        </li>
+                        <li class="sampleCode odd first col-lg-3 col-sm-12">
+                            <a href="../../product/2480" class="detail">
+                                <div class="">
+                                    <div class="project-info">
+                                        <span class="button dark">MORE</span>
+                                    </div>
+                                    <img src="./images/662000010081 (1).jpg" class="medium"
+                                        data-params="{w: 200, h: 200}">
+                                </div>
+                            </a>
+                            <div class="text">
+                                <p class="code serial" data-params="{length: 10}">S000662000020021</p>
+                                <p class="name subject" data-params="{length: 25}">3-6人組 穹頂計畫III《末日慶典》</p>
+                                <p class="special">售價 <span class="value">NT $ 1,980</span> 元</p>
+                            </div>
+                        </li>
+                        <li class="sampleCode odd first col-lg-3 col-sm-12">
+                            <a href="../../product/2480" class="detail">
+                                <div class="">
+                                    <div class="project-info">
+                                        <span class="button dark">MORE</span>
+                                    </div>
+                                    <img src="./images/662000010081 (1).jpg" class="medium"
+                                        data-params="{w: 200, h: 200}">
+                                </div>
+                            </a>
+                            <div class="text">
+                                <p class="code serial" data-params="{length: 10}">S000662000020021</p>
+                                <p class="name subject" data-params="{length: 25}">3-6人組 穹頂計畫III《末日慶典》</p>
+                                <p class="special">售價 <span class="value">NT $ 1,980</span> 元</p>
+                            </div>
+                        </li>
+                        <li class="sampleCode odd first col-lg-3 col-sm-12">
+                            <a href="../../product/2480" class="detail">
+                                <div class="">
+                                    <div class="project-info">
+                                        <span class="button dark">MORE</span>
+                                    </div>
+                                    <img src="./images/662000010081 (1).jpg" class="medium"
+                                        data-params="{w: 200, h: 200}">
+                                </div>
+                            </a>
+                            <div class="text">
+                                <p class="code serial" data-params="{length: 10}">S000662000020021</p>
+                                <p class="name subject" data-params="{length: 25}">3-6人組 穹頂計畫III《末日慶典》</p>
+                                <p class="special">售價 <span class="value">NT $ 1,980</span> 元</p>
+                            </div>
+                        </li>
+                        <li class="sampleCode odd first col-lg-3 col-sm-12">
+                            <a href="../../product/2480" class="detail">
+                                <div class="">
+                                    <div class="project-info">
+                                        <span class="button dark">MORE</span>
+                                    </div>
+                                    <img src="./images/662000010081 (1).jpg" class="medium"
+                                        data-params="{w: 200, h: 200}">
+                                </div>
+                            </a>
+                            <div class="text">
+                                <p class="code serial" data-params="{length: 10}">S000662000020021</p>
+                                <p class="name subject" data-params="{length: 25}">3-6人組 穹頂計畫III《末日慶典》</p>
+                                <p class="special">售價 <span class="value">NT $ 1,980</span> 元</p>
+                            </div>
+                        </li>
+                        <li class="sampleCode odd first col-lg-3 col-sm-12">
+                            <a href="../../product/2480" class="detail">
+                                <div class="">
+                                    <div class="project-info">
+                                        <span class="button dark">MORE</span>
+                                    </div>
+                                    <img src="./images/662000010081 (1).jpg" class="medium"
+                                        data-params="{w: 200, h: 200}">
+                                </div>
+                            </a>
+                            <div class="text">
+                                <p class="code serial" data-params="{length: 10}">S000662000020021</p>
+                                <p class="name subject" data-params="{length: 25}">3-6人組 穹頂計畫III《末日慶典》</p>
+                                <p class="special">售價 <span class="value">NT $ 1,980</span> 元</p>
+                            </div>
+                        </li>
+                        <li class="sampleCode odd first col-lg-3 col-sm-12">
+                            <a href="../../product/2480" class="detail">
+                                <div class="">
+                                    <div class="project-info">
+                                        <span class="button dark">MORE</span>
+                                    </div>
+                                    <img src="./images/662000010081 (1).jpg" class="medium"
+                                        data-params="{w: 200, h: 200}">
+                                </div>
+                            </a>
+                            <div class="text">
+                                <p class="code serial" data-params="{length: 10}">S000662000020021</p>
+                                <p class="name subject" data-params="{length: 25}">3-6人組 穹頂計畫III《末日慶典》</p>
+                                <p class="special">售價 <span class="value">NT $ 1,980</span> 元</p>
+                            </div>
+                        </li>
+                        <li class="sampleCode odd first col-lg-3 col-sm-12">
+                            <a href="../../product/2480" class="detail">
+                                <div class="">
+                                    <div class="project-info">
+                                        <span class="button dark">MORE</span>
+                                    </div>
+                                    <img src="./images/662000010081 (1).jpg" class="medium"
+                                        data-params="{w: 200, h: 200}">
+                                </div>
+                            </a>
+                            <div class="text">
+                                <p class="code serial" data-params="{length: 10}">S000662000020021</p>
+                                <p class="name subject" data-params="{length: 25}">3-6人組 穹頂計畫III《末日慶典》</p>
+                                <p class="special">售價 <span class="value">NT $ 1,980</span> 元</p>
+                            </div>
+                        </li>
+                        <li class="sampleCode odd first col-lg-3 col-sm-12">
+                            <a href="../../product/2480" class="detail">
+                                <div class="">
+                                    <div class="project-info">
+                                        <span class="button dark">MORE</span>
+                                    </div>
+                                    <img src="./images/662000010081 (1).jpg" class="medium"
+                                        data-params="{w: 200, h: 200}">
+                                </div>
+                            </a>
+                            <div class="text">
+                                <p class="code serial" data-params="{length: 10}">S000662000020021</p>
+                                <p class="name subject" data-params="{length: 25}">3-6人組 穹頂計畫III《末日慶典》</p>
+                                <p class="special">售價 <span class="value">NT $ 1,980</span> 元</p>
+                            </div>
+                        </li>
+                        <li class="sampleCode odd first col-lg-3 col-sm-12">
+                            <a href="../../product/2480" class="detail">
+                                <div class="">
+                                    <div class="project-info">
+                                        <span class="button dark">MORE</span>
+                                    </div>
+                                    <img src="./images/662000010081 (1).jpg" class="medium"
+                                        data-params="{w: 200, h: 200}">
+                                </div>
+                            </a>
+                            <div class="text">
+                                <p class="code serial" data-params="{length: 10}">S000662000020021</p>
+                                <p class="name subject" data-params="{length: 25}">3-6人組 穹頂計畫III《末日慶典》</p>
+                                <p class="special">售價 <span class="value">NT $ 1,980</span> 元</p>
+                            </div>
+                        </li>
+                        <li class="sampleCode odd first col-lg-3 col-sm-12">
+                            <a href="../../product/2480" class="detail">
+                                <div class="">
+                                    <div class="project-info">
+                                        <span class="button dark">MORE</span>
+                                    </div>
+                                    <img src="./images/662000010081 (1).jpg" class="medium"
+                                        data-params="{w: 200, h: 200}">
+                                </div>
+                            </a>
+                            <div class="text">
+                                <p class="code serial" data-params="{length: 10}">S000662000020021</p>
+                                <p class="name subject" data-params="{length: 25}">3-6人組 穹頂計畫III《末日慶典》</p>
+                                <p class="special">售價 <span class="value">NT $ 1,980</span> 元</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 頁數 -->
+                    <div class="text-center btnWp">
+                        <ul class="pagination justify-content-center">
+                            <li class="pageWrap active"><a href="/products/page-1/14" title="第 1 頁" class="active"
+                                    data-page="">1</a></li>
+                            <li class="pageWrap"><a href="/products/page-2/14" title="第 2 頁" data-page="">2</a></li>
+                            <li class="pageWrap"><a href="/products/page-3/14" title="第 3 頁" data-page="">3</a></li>
+                            <li class="pageWrap"><a href="/products/page-4/14" title="第 4 頁" data-page="">4</a></li>
+                            <li class="skipSign"><a>[ ... ]</a></li>
+                            <li class="pageWrap"><a href="/products/page-8/14" title="8" data-page="">8</a></li>
+                            <li class="nextWrap"><a href="/products/page-2/14" title="下一頁" class="next" data-page="">下一頁
+                                    »</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer id="footer" class="container df">
+            <div class="row my-3 mx-3">
+                <div class="col-sm-6">
+                    <h3><span><a href="//www.chimeimuseum.org/">奇美博物館</a></span></h3>
+                    <ul class="columns linkNav ">
+                        <li><a href="https://www.chimeimuseum.org/visit" target="_blank">參觀</a></li>
+                        <li><a href="https://www.chimeimuseum.org/exhibition-event" target="_blank">展覽</a></li>
+                        <li><a href="https://www.chimeimuseum.org/news" target="_blank">活動</a></li>
+                        <li><a href="https://www.chimeimuseum.org/permanent-exhibition" target="_blank">典藏</a></li>
+                        <li><a href="https://www.chimeimuseum.org/apply/60bdc72e64d13" target="_blank">申請</a></li>
+                        <li><a href="https://www.chimeimuseum.org/visit/store" target="_blank">禮品</a></li>
+                    </ul>
+                    <div class="d-none d-sm-block">
+                        <h3><span>線上商店</span></h3>
+                        <ul class="columns productNav" id="product-footer-category">
+                            <li class="sampleCode odd first">
+                                <a href="../../products/133" class="detail subject">➤線上課程推薦</a>
+                            </li>
+                            <li class="sampleCode even second">
+                                <a href="../../products/114" class="detail subject">➤主題推薦</a>
+                            </li>
+                            <li class="sampleCode odd first">
+                                <a href="../../products/12" class="detail subject">典藏框畫</a>
+                            </li>
+                            <li class="sampleCode even second">
+                                <a href="../../products/13" class="detail subject">雕塑</a>
+                            </li>
+                            <li class="sampleCode odd first">
+                                <a href="../../products/31" class="detail subject">古典音樂</a>
+                            </li>
+                            <li class="sampleCode even second">
+                                <a href="../../products/14" class="detail subject">文創精品</a>
+                            </li>
+                            <li class="sampleCode odd first">
+                                <a href="../../products/16" class="detail subject">文具用品</a>
+                            </li>
+                            <li class="sampleCode even second">
+                                <a href="../../products/17" class="detail subject">飾品</a>
+                            </li>
+                            <li class="sampleCode odd first">
+                                <a href="../../products/15" class="detail subject">生活居家</a>
+                            </li>
+                            <li class="sampleCode even second">
+                                <a href="../../products/19" class="detail subject">書籍</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row col-md-6 col-sm-12 foot-size">
+                    <form class="homeEpaper form-inline m-0 p-0" id="epaperForm">
+                        <div class="form-group">
+                            <label for="search">訂閱電子報</label>
+                            <input name="email" type="text" class="form-control" placeholder="請輸入信箱">
+                            <button type="submit" class="btn btn-primary icon-search"><span
+                                    class="text-hide">搜尋</span></button>
+                        </div>
+
+                    </form>
+                    <p class="oterlink col-md-6 m-0 p-0">
+                        <a href="#" title="隱私權政策 " class="p-0">隱私權政策</a> |
+                        <a href="#" title="使用條款">使用條款</a>
+                    </p>
+                    <div class="col-md-6">
+                        <img src="./images/paypal.png" alt="" usemap="#Map">
+                        <img src="./images/twca.png" width="30">
+                        <map name="Map" id="Map">
+                            <area shape="rect" coords="5,0,45,22" href="#" title="Visa">
+                            <area shape="rect" coords="50,0,88,22" href="#" title="Master">
+                            <area shape="rect" coords="90,0,126,22" href="#" title="JCB">
+                        </map>
+                        &nbsp;&nbsp;
+
+                    </div>
+                    <br clear="all">
+                    <p class="copyright p-0">
+                        Copyright © 奇美博物館 All rights reserved.<br>
+                        客服專線：06-2660808<br>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <a href="#" class="icon-arrow-up" id="gotop"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z" />
+            </svg></a>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+
+        <!-- https://cdnjs.com/libraries/popper.js/2.5.4 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+
+        <!-- More: https://getbootstrap.com/docs/5.0/getting-started/introduction/ -->
+
+        <!-- JavaScript Bundle with Popper -->
+
+</body>
+
+</html>
